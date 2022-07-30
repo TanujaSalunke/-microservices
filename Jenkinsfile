@@ -8,12 +8,12 @@ pipeline{
         }        
         stage('maven compile'){
             steps{
-                bat "mvn package"
+                bat "mvn validate"
             }
         }
         stage('test'){
             steps{
-                bat "mvn clean install"
+                bat "mvn clean verify"
             }
         }
     }
