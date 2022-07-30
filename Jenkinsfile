@@ -16,20 +16,5 @@ pipeline{
                 bat "mvn test"
             }
         }
-        stage('package'){
-            steps{
-                bat "mvn package"
-            }
-        }
-        stage('verify'){
-            steps{
-                bat "mvn verify"
-            }
-        }
-         stage('install'){
-            steps{
-                bat "mvn install"
-            }
-        }         
     }
 }
