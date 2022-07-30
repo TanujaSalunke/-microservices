@@ -1,19 +1,19 @@
 pipeline{
     agent any
     stages{
-        stage('Git clone'){
+        stage('validate'){
             steps{
                 bat "mvn validate"
             }
         }        
         stage('maven compile'){
             steps{
-                bat "mvn compile"
+                bat "mvn package"
             }
         }
         stage('test'){
             steps{
-                bat "mvn test"
+                bat "mvn clean install"
             }
         }
     }
